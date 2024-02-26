@@ -1,0 +1,652 @@
+
+<!DOCTYPE html><!--  This site was created by Dennis Snellenberg (Code by Dennis)  -->
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Doukala - Website</title>
+      <link rel="canonical" href="#"/>
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+      <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+      <link rel="preload" as="font" href="fonts/NeueMontreal-Regular.otf" type="font/otf" crossorigin="anonymous">
+      <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+      <link href="styles/normalize.css" rel="stylesheet">      
+      <link href="styles/locomotive-scroll.css" rel="stylesheet">      
+      <link href="styles/styleguide.css" rel="stylesheet">      
+      <link href="styles/components.css" rel="stylesheet">      
+      <!-- <link href="styles/style.css" rel="stylesheet">       -->
+      <link href="styles/style-new.css" rel="stylesheet">
+      <link href="styles/responsive.css" rel="stylesheet">
+		<script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('set', 'page', window.location.pathname);
+         gtag('send', 'pageview');
+         
+         gtag('config', 'G-SGWQQRQ15Y');
+		</script>
+
+        
+		<style>
+   #sectionPin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+.pin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 10vw;
+}
+.pin-wrap > * {
+  min-width: 60vw;
+  padding: 0 5vw;
+}
+
+p {
+  position: absolute;
+  bottom: 10vw;
+  right: 10vw;
+  width: 200px;
+  line-height: 1.5;
+}
+
+		</style>
+
+      
+   </head>
+ 
+    <body data-barba="wrapper">
+        <div class="no-scroll-overlay"></div>
+        <div class="loading-container">
+            <div class="loading-screen">
+                <div class="rounded-div-wrap top">
+                    <div class="rounded-div"></div>
+                </div>
+                <div class="loading-words">
+
+                    <h2 class="active">À propos<div class="dot"></div></h2>
+                </div>
+                <div class="rounded-div-wrap bottom">
+                    <div class="rounded-div"></div>
+                </div>
+            </div>
+        </div>
+
+        <main class="main" id="about" data-barba="container" data-barba-namespace="work" >
+            <div class="mouse-pos-list-image no-select">
+                <div class="mouse-pos-list-image-bounce overlay">
+                    <div class="float-image-wrap">
+                        <li class="mouse-pos-list-image-inner design development interaction visible">
+                            <div class="overlay overlay-image lazy" style="background-color: #48494A; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="./assets/home_banner.jpg"></div>                        </li>
+                       <li class="mouse-pos-list-image-inner design development interaction visible">
+                            <div class="overlay overlay-image lazy" style="background-color: #101010; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="./assets/home_banner.jpg"></div>                        </li>
+                        <li class="mouse-pos-list-image-inner development interaction design visible">
+                            <div class="overlay overlay-image lazy" style="background-color: #363637; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="./assets/home_banner.jpg"></div>                        </li>
+                        <li class="mouse-pos-list-image-inner design development interaction visible">
+                            <div class="overlay overlay-image lazy" style="background-color: #D8D3CD; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="./assets/home_banner.jpg"></div>                        
+                        </li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="mouse-pos-list-btn no-select"></div> -->
+            <!-- <div class="mouse-pos-list-span no-select"><p>View</p></div> -->
+            <div class="btn btn-hamburger">
+                <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
+                    <div class="btn-fill"></div>
+                    <div class="btn-text">
+                        <div class="btn-bars"></div>
+                        <span class="btn-text-inner">Menu</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="overlay fixed-nav-back"></div>
+
+            <div class="fixed-nav theme-dark">
+                <div class="fixed-nav-rounded-div">
+                    <div class="rounded-div-wrap">
+                        <div class="rounded-div"></div>
+                    </div>
+                </div>
+                <div class="fixed-nav-inner">
+                    <div class="row nav-row">
+                        <h5>Navigation</h5>
+                        <div class="stripe"></div>
+                        <ul class="links-wrap">
+                            <li class="btn btn-link">
+                                <a href="index.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Accueil</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="work.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Réalisations</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link active">
+                                <a href="about.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">À propos</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="contact.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Contact</span>
+                                </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row social-row">
+                        <div class="stripe"></div>
+                        <div class="socials">
+                            <h5>SOCIAL MEDIA</h5>
+                            <ul>
+                                <li class="btn btn-link btn-link-external">
+                                    <a href="https://instagram.com/doukkala.metal" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner">Instagram</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="btn btn-link btn-link-external">
+                                    <a href="https://www.linkedin.com/company/doukkala-metal/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner">Linkedin</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="btn btn-link btn-link-external">
+                                    <a href="https://facebook.com/doukkala.metal" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner">Facebook</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="main-wrap" data-scroll-container>
+               
+
+               <section class="home-header about__page theme-dark" data-scroll-section>
+                <!-- <div class="overlay personal-image no-select once-in" data-scroll data-scroll-speed="-3" data-scroll-position="top">
+                </div> -->
+
+                    <div class="header__container">
+                        <div class="social__media-container">
+                            <a href="https://facebook.com/doukkala.metal" target="_blank" class="social_btn magnetic" data-strength="20" data-strength-text="10">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com/doukkala.metal" target="_blank" class="social_btn magnetic" data-strength="20" data-strength-text="10">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/doukkala-metal/" target="_blank" class="social_btn magnetic" data-strength="20" data-strength-text="10">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                                
+                        <a href="index.html" class="logo_doukkal">
+                            <img src="assets/LOGO DOUKKALA METAL NOIR.svg"/>
+                        </a>
+                        <ul class="links-wrap">
+                            <li class="btn btn-link">
+                                <a href="work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Réalisations</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">À propos</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Contact</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link btn-menu">
+                                <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                    <div class="btn-text">
+                                        <span class="btn-text-inner">Menu</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="about__section" style="width: 100%;" data-scroll data-scroll-speed="-3" data-scroll-position="top">
+                        <div class="container home_content once-in once-in-secondary">
+                            <div class="row">
+                                <div class="flex-col">
+                                    <div class="header-above-h4" data-scroll data-scroll-speed="1">
+                                    </div>
+                                    <div class="about__badge">
+                                        à porpos nous
+                                    </div>
+                                    <h4 class="hero__title">
+                                     doukkala<br>metal
+                                    </h4>
+                                     <div class="hero__icon-qutoe">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                     </div>
+                                    <p class="hero__text">
+                                        D’après mon expérience de plus 40 ans, nous sommes charpetiers de père en fils, formés dans l’esprit des compagnons aux méthodes de construction métallique.
+                                    </p>
+                                    <p class="hero__text author_name">
+                                        Hassan HABIB
+                                    </p>
+                                    <p class="hero__text author_job">
+                                        Fondateur, directeur général
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </section>
+
+               
+
+
+
+                <section class="section home-intro" data-scroll-section>
+                    <div class="container medium">
+                        <div class="row">
+                            <div class="flex-col">
+                                <div class="about__title">
+                                <h4>NOTRE HISTOIRE</h4>
+                                </div>
+                                <!-- <div class="btn btn-round" data-scroll data-scroll-speed="2">
+                                <a href="about.html" class="btn-click magnetic " data-strength="100" data-strength-text="50">
+                                    <div class="btn-fill"></div>
+                                    <span class="btn-text">
+                                        <span class="btn-text-inner">À propos me</span>
+                                    </span>
+                                </a>
+                                </div> -->
+                            </div>
+                            <div class="flex-col">
+                                <!-- <h4 class="span-lines animate">Infinity Constructions Group has been operating for over 30
+                                    years. We are a Tier 2 commercial construction company active
+                                    in all sectors of the industry. Infinity Constructions operates
+                                    primarily in the Sydney and Melbourne markets.
+                                </h4> -->
+                                <h4 class="span-texts animate about__splining">
+                                    La passion de la construction métallique a toujours été au cœur de l'histoire de DoukkalaMetal. Tout a commencé il y a plus de 40 ans, lorsque notre fondateur, M.HABIB HASSAN, a débuté son apprentissage en tant que jeune charpentier dans un atelier. Inspiré par sa passion pour les propriétés uniques du métal et son désir d'innover, il a rapidement acquis une expertise remarquable dans la conception et la fabrication de structures métalliques.                                
+                                </h4>
+                                <!-- <h4 class="span-lines animate" style="margin-top: 25px;">
+                                    “We have built our reputation as a quality builder that places
+                                    outstanding customer service at the heart of our business. We
+                                    are motivated by delivering excellence for our clients.”
+                                </h4> -->
+                                <p class="about__text">Au fil des années, notre entreprise familiale a grandi, se forgeant une réputation solide grâce à notre engagement envers la qualité, la fiabilité et le service client. Chaque projet que nous entreprenons est le résultat d'un héritage de savoir-faire transmis de génération en génération.</p>
+                                <p class="about__text">Aujourd'hui, DoukkalaMetal est une référence dans le domaine de la construction métallique, offrant des solutions sur mesure pour une gamme variée de projets. Que ce soit pour des bâtiments industriels, commerciaux, agricoles ou résidentiels, nous mettons notre passion et notre expertise au service de nos clients, afin de réaliser leurs rêves architecturaux les plus audacieux.</p>
+                                <p class="about__text">Notre histoire est celle d'une entreprise fondée sur des valeurs familiales fortes, une éthique de travail inébranlable et un engagement indéfectible envers l'excellence. Chez DoukkalaMetal, chaque projet est une nouvelle opportunité de créer quelque chose de remarquable, de laisser une empreinte durable dans le paysage architectural et de contribuer au développement de notre communauté.</p>
+                                <p class="about__text">Nous sommes fiers de notre passé, confiants dans notre présent et enthousiastes à l'idée de bâtir l'avenir avec vous, notre précieux partenaire.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="section about-round-wrap" data-scroll-section>
+                    <div class="container medium">
+                        <div class="about-round_title">
+                            <div class="about__title">
+                            <h4>Nos Valeurs</h4>
+                            </div>
+                        </div>
+                        <div class="row secondary">
+                            <div class="flex-col reveal">
+                                <img src="assets/Qualité.webp" class="about__content-image"/>
+                            </div>
+                            <div class="flex-col">
+                                <span class="about__content-subtitle">
+                                    Qualité 
+                                </span>
+                                <h4 class="about__content-text">
+                                    Priorisez la qualité dans tout ce que vous faites, en veillant à ce que les produits et services soient de la plus haute qualité possible.
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="row secondary">
+                            <div class="flex-col">
+                                <span class="about__content-subtitle">
+                                    Professionnalisme
+                                </span>
+                                <h4 class="about__content-text">
+                                    Montrez votre professionnalisme en étant toujours à l'heure, en respectant les délais et en maintenant une communication claire et ouverte avec vos clients.
+                                </h4>
+                            </div>
+                            <div class="flex-col reveal">
+                                <img src="assets/Professionnalisme.webp" class="about__content-image"/>
+                            </div>
+                        </div>
+                        <div class="row secondary">
+                            <div class="flex-col reveal">
+                                <img src="assets/Intégrité.webp" class="about__content-image"/>
+                            </div>
+                            <div class="flex-col">
+                                <span class="about__content-subtitle">
+                                    Intégrité
+                                </span>
+                                <h4 class="about__content-text">
+                                    Agissez de manière éthique et transparente en toutes circonstances, en respectant les lois et les normes en vigueur.
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="row secondary">
+                            <div class="flex-col">
+                                <span class="about__content-subtitle">
+                                    Innovation
+                                </span>
+                                <h4 class="about__content-text">
+                                    Continuer à explorer de nouvelles idées et techniques pour améliorer la qualité et l'efficacité de vos produits et services.
+                                </h4>
+                            </div>
+                            <div class="flex-col reveal">
+                                <img src="assets/Innovation.webp" class="about__content-image"/>
+                            </div>
+                        </div>
+                        <div class="row secondary">
+                            <div class="flex-col reveal">
+                                <img src="assets/Responsabilité.webp" class="about__content-image"/>
+                            </div>
+                            <div class="flex-col">
+                                <span class="about__content-subtitle">
+                                    Responsabilité
+                                </span>
+                                <h4 class="about__content-text">
+                                    Prenez la responsabilité de vos actions et de vos décisions, en veillant à ce que tous les employés suivent les mêmes principes.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="horizontal-items section"  data-scroll-section>
+                    <div class="container">    
+                       <div class="row row-1" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/EMB.png" style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/z.png" style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/carrefour.png" style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/CENTRALE.png"  style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/ALF SAHEL.png" style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/EMB.png" style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="row row-2" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/marjan.png" style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/marjan.png" style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/ocp.png" style="width: 100%;height: 100%;max-width: 90%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/sika.png" style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/TGCC.png" style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="flex-col">
+                             <div class="horizontal-single-item">
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <div style="width: 100%; height: 100%;background-color: #f1f1f1;border-radius: 12px;border: 1px solid #dadada; display: grid;place-content: center;">
+                                        <img src="assets/clients/mohammed vi.png" style="width: 100%;height: 100%;max-width: 80%; margin-inline: auto;"/>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </section>
+
+                
+                
+
+
+                <div class="footer-rounded-div" data-scroll-section>
+                    <div class="rounded-div-wrap">
+                        <div class="rounded-div"></div>
+                    </div>
+                </div>
+
+                <div class="footer-wrap footer-footer-wrap theme-dark" data-scroll-section>
+                    <footer class="section footer" data-scroll data-scroll-speed="-4" data-scroll-position="bottom">
+                        <div class="container medium">
+                            <div class="row">
+                                <div class="flex-col">
+                                    <div class="arrow"><?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>arrow-up-right</title>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Artboard" transform="translate(-1019.000000, -279.000000)" stroke="#FFFFFF" stroke-width="1.5">
+                                            <g id="arrow-up-right" transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)">
+                                                <polyline id="Path" points="2.76923077 0 12 0 12 9.23076923"></polyline>
+                                                <line x1="12" y1="0" x2="0" y2="12" id="Path"></line>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg></div>
+                                    <h2><span><div class="profile-picture"></div> Let’s work  </span><span>together</span></h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="flex-col">
+                                    <div class="stripe"></div>
+                                    <div class="btn-fixed">
+                                        <div class="btn btn-round" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal" data-scroll-position="bottom" data-scroll-offset="-50%, 0">
+                                            <a href="contact.html" class="btn-click magnetic " data-strength="100" data-strength-text="50">
+                                                <div class="btn-fill"></div>
+                                                <span class="btn-text">
+                                                    <span class="btn-text-inner">Get in touch</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="flex-col">
+                                    <div class="btn btn-normal">
+                                        <a href="#" class="btn-click magnetic" data-strength="25" data-strength-text="15">
+                                        <div class="btn-fill"></div>
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner change">contact@doukkalametal.ma</span>
+                                        </span>
+                                        </a>
+                                    </div>
+                                    <div class="btn btn-normal">
+                                        <a href="tel:+212 0661526801" class="btn-click magnetic" data-strength="25" data-strength-text="15">
+                                        <div class="btn-fill"></div>
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner change">+212 0661526801</span>
+                                        </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container no-padding">
+                            <div class="row bottom-footer">
+                                <div class="flex-col">
+                                    <div class="credits">
+                                        <h5>Edited By</h5>
+                                        <a href="https://whd.ma/" style="text-transform: uppercase; color: #fff;">WHD Agency</a>
+                                    </div>
+                                </div>
+                                <div class="flex-col">
+                                    <div class="socials">
+                                        <h5>SOCIAL MEDIA</h5>
+                                        <ul>
+                                            <li class="btn btn-link btn-link-external">
+                                                <a href="https://instagram.com/doukkala.metal" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                                    <span class="btn-text">
+                                                        <span class="btn-text-inner">Instagram</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="btn btn-link btn-link-external">
+                                                <a href="https://www.linkedin.com/company/doukkala-metal/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                                    <span class="btn-text">
+                                                        <span class="btn-text-inner">Linkedin</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="btn btn-link btn-link-external">
+                                                <a href="https://facebook.com/doukkala.metal" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                                    <span class="btn-text">
+                                                        <span class="btn-text-inner">Facebook</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="stripe"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <div class="overlay overlay-gradient"></div>
+                </div>
+
+
+            </div>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/dbfca54b0d.js" crossorigin="anonymous"></script>
+        <script src="js/locomotive-scroll.min.js"></script>        
+        <script defer src="js/script.js"></script> 
+        <script defer src="js/index-new.js"></script> 
+        <script src="https://unpkg.com/split-type"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+    </body>
+</html>
