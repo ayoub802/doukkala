@@ -1,48 +1,50 @@
+/* ------------------------- Styleguide Â® Code by Dennis -------------------------------------------------- */
+
 /* ------------------------- Fonts -------------------------------------------------- */
 
 @font-face {
-    font-family: 'Doukkal Sans';
-    src: url('../assets/font/NeueMontreal-Light.otf') format('opentype');
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-Light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
     font-display: auto;
 }
 
 @font-face {
-    font-family: 'Doukkal Sans';
-    src: url('../assets/font/NeueMontreal-LightItalic.otf') format('opentype');
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-LightItalic.otf') format('opentype');
     font-weight: 300;
     font-style: italic;
     font-display: auto;
 }
 
 @font-face {
-    font-family: 'Doukkal Sans';
-    src: url('../assets/font/NeueMontreal-Regular.otf') format('opentype');
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-Regular.otf') format('opentype');
     font-weight: 450;
     font-style: normal;
     font-display: auto;
 }
 
 @font-face {
-    font-family: 'Doukkal Sans';
-    src: url('../assets/font/NeueMontreal-Italic.otf') format('opentype');
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-Italic.otf') format('opentype');
     font-weight: 450;
     font-style: italic;
     font-display: auto;
 }
 
 @font-face {
-    font-family: 'Doukkal Sans';
-    src: url('../assets/font/NeueMontreal-Bold.otf') format('opentype');
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-Bold.otf') format('opentype');
     font-weight: 800;
     font-style: normal;
     font-display: auto;
 }
 
 @font-face {
-    font-family: 'Doukkal Sans';
-    src: url('../assets/font/NeueMontreal-BoldItalic.otf') format('opentype');
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-BoldItalic.otf') format('opentype');
     font-weight: 800;
     font-style: italic;
     font-display: auto;
@@ -116,7 +118,7 @@ li, ul {padding: 0; margin: 0; list-style: none;}
 
 body {
     -webkit-font-smoothing: antialiased;
-    font-family: 'Doukkal Sans', sans-serif;
+    font-family: 'Dennis Sans', sans-serif;
     color: var(--color-text);
     line-height: 1.6;
     font-weight: 450;
@@ -154,17 +156,13 @@ audio, canvas, iframe, img, svg, video {
     vertical-align: middle;
 }
 
-
-body::-webkit-scrollbar {
-    display: none; /* Hide the scrollbar in WebKit browsers */
-}
 /* ------------------------- Typography -------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, span, strong, em  {padding: 0; margin: 0; font-style: normal; font-weight: 450; letter-spacing: normal;}
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, p:last-child, p.big:last-child, p.small:last-child, a:last-child, strong:last-child  {margin-bottom: 0;}
 
 h1 {
-    font-family: 'Doukkal Sans', sans-serif;
+    font-family: 'Dennis Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: clamp(3.25em, 7vw, 8em);
@@ -174,7 +172,7 @@ h1 {
 }
   
 h2 {
-    font-family: 'Doukkal Sans', sans-serif;
+    font-family: 'Dennis Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: calc(clamp(3.25em, 5vw, 4.5em) * .75);
@@ -183,7 +181,7 @@ h2 {
 }
   
 h3 {
-    font-family: 'Doukkal Sans', sans-serif;
+    font-family: 'Dennis Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: clamp(2.66em, 4.65vw, 5.32em);
@@ -192,7 +190,7 @@ h3 {
 }
   
 h4 {
-    font-family: 'Doukkal Sans', sans-serif;
+    font-family: 'Dennis Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: clamp(1.55em, 2.3vw, 2.5em);
@@ -201,7 +199,7 @@ h4 {
 }
 
 h5 {
-    font-family: 'Doukkal Sans', sans-serif;
+    font-family: 'Dennis Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: .6em;
@@ -214,7 +212,7 @@ h5 {
 
 
 p {
-    font-family: 'Doukkal Sans', sans-serif;
+    font-family: 'Dennis Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     color: var(--text);
@@ -699,7 +697,7 @@ video.overlay {
     transform: translateX(-3.7em) rotate(0.001deg);
 }
 
-.btn-link.btn-left-top .Doukkal {
+.btn-link.btn-left-top .dennis {
     transform: translateX(0) rotate(0.001deg);
     position: relative;
     display: inline-block;
@@ -708,7 +706,7 @@ video.overlay {
     transition: var(--animation-primary);
 }
 
-.btn-link.btn-left-top:hover .Doukkal {
+.btn-link.btn-left-top:hover .dennis {
     padding-right: 2em;
     transform: translateX(-3.7em) rotate(0.001deg);
 }
@@ -733,7 +731,7 @@ video.overlay {
         transform: translateX(0) rotate(0.001deg);
     }
     
-    .btn-link.btn-left-top:hover .Doukkal {
+    .btn-link.btn-left-top:hover .dennis {
         padding-right: .2em;
         transform: translateX(0) rotate(0.001deg);
     }

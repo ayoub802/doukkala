@@ -11,63 +11,10 @@ initPageTransitions();
 
 // Animation - First Page Load
 function initLoaderHome() { 
-  const text = new SplitType("#text")
+  const text = new SplitType("#preload_text")
   const boxes = document.querySelector(".boxes_wrapper")
   const preloader = document.querySelector(".prelod_text")
   var tl = gsap.timeline();
-
-  $(document).ready(function(){
-    $(".loading-words").addClass('active');
-    $(".active__displaying").removeClass('active');
-  });
-
-  tl.set(".loading-words", { 
-		display: "none",
-    opacity: 0
-	});	
-
-
-  tl.from(".char", {
-    y: 105,
-    stagger: .06,
-    duration: .3,
-    rotate: 5,
-  //   ease: "back.out(1.7)",
-    ease: "power1.out",
-      onUpdate: (progress) => {
-      // Update opacity during the animation
-      gsap.set("#text", { opacity: progress });
-    },
-    onComplete: () => {
-      //     // Zoom in animation
-          gsap.to("#text", {
-            scale: 1.2,
-            duration: 0.5,
-            stagger: 0.1,
-            ease: "power1.out",
-            onComplete: () => {
-              // Zoom out animation
-              
-              gsap.to("#text", {
-                opacity: 0,
-                duration: 0.5,
-                ease: "power1.out",
-                onComplete: () => {
-                  // Animation complete, add a class to .boxes
-                  gsap.set(".loading-words .active__home", { 
-                    display: "flex",
-                  });
-                },
-              });
-            },
-          });
-        },
-  })
-
-  tl.set(".loading-words", { 
-    display: "block",
-    opacity: 1
-  });	
 
 	tl.set(".loading-screen", { 
 		top: "0",
@@ -91,8 +38,6 @@ function initLoaderHome() {
   tl.set(".loading-words .active", { 
 		display: "none",
 	});
-  
- 
 
   tl.set(".loading-words .home-active, .loading-words .home-active-last", { 
 		display: "block",
@@ -122,16 +67,16 @@ function initLoaderHome() {
   });
 
   tl.to(".loading-words", {
-		duration: 2,
+		duration: .8,
 		opacity: 1,
     // y: -50,
     ease: "Power4.easeOut",
     delay: .5
 	});
 
-  tl.to(".loading-words .active__displaying.active", {
+  tl.to(".loading-words .home-active", {
 		duration: .01,
-		opacity: 0,
+		opacity: 1,
     stagger: .15,
     ease: "none",
     onStart: homeActive
@@ -147,7 +92,7 @@ function initLoaderHome() {
   // })
 
   function homeActive() {
-    gsap.to(".loading-words .active__displaying.active", {
+    gsap.to(".loading-words .home-active", {
       duration: .01,
       opacity: 0,
       stagger: .15,
@@ -253,7 +198,7 @@ function initLoader() {
 		duration: .8,
 		top: "-100%",
 		ease: "Power4.easeInOut",
-    delay: 2
+    delay: .5
   });
 
   tl.to(".loading-screen .rounded-div-wrap.bottom", {
@@ -288,9 +233,7 @@ function initLoader() {
 		cursor: "auto",
 	},"=-.8");
 
-  $(document).ready(function(){
-    $(".active__displaying").addClass('active');
-  });
+  
 
 }
 
@@ -298,10 +241,7 @@ function initLoader() {
 // Animation - Page transition In
 function pageTransitionIn() {
 	var tl = gsap.timeline();
-  $(document).ready(function(){
-    $(".loading-words").removeClass('active');
-    $(".active__displaying").removeClass('active');
-  });
+
   tl.call(function() {
     scroll.stop();
   });
@@ -332,7 +272,7 @@ function pageTransitionIn() {
 	tl.to(".loading-screen", {
 		duration: .5,
 		top: "0%",
-		ease: "Power4.easeIn",
+		ease: "Power4.easeIn"
 	});
 
   if ($(window).width() > 540) { 
@@ -407,9 +347,7 @@ function pageTransitionIn() {
 // Animation - Page transition Out
 function pageTransitionOut() {
 	var tl = gsap.timeline();
-  $(document).ready(function(){
-    $(".active__displaying").addClass('active');
-  });
+
   if ($(window).width() > 540) { 
     tl.set("main .once-in", {
       y: "50vh",
@@ -591,7 +529,6 @@ function initScript() {
   initVisualFilter();
   initScrolltriggerNav();
   initScrollLetters();
-  initTricksWordText();
   initTricksWords();
   initContactForm();
   initLazyLoad();
@@ -841,16 +778,10 @@ function initStickyCursorWithDelay() {
   // Source: http://jsfiddle.net/639Jj/1/ 
 
   $('.mouse-pos-list-image-wrap a').on('mouseenter', function() {
-    $('.mouse-pos-list-image, .mouse-pos-list-span-big').addClass('active');
-  });
-  $('.page_transition video').on('mouseenter', function() {
-    $('.mouse-pos-list-btn, .mouse-pos-list-span').addClass('active');
-  });
-  $('.page_transition video').on('mouseleave', function() {
-    $('.mouse-pos-list-btn, .mouse-pos-list-span').removeClass('active');
+    $('.mouse-pos-list-image, .mouse-pos-list-btn, .mouse-pos-list-span, .mouse-pos-list-span-big').addClass('active');
   });
   $('.mouse-pos-list-image-wrap a').on('mouseleave', function() {
-    $('.mouse-pos-list-image, .mouse-pos-list-span-big').removeClass('active');
+    $('.mouse-pos-list-image, .mouse-pos-list-btn, .mouse-pos-list-span, .mouse-pos-list-span-big').removeClass('active');
   });
   $('.single-tile-wrap a, .mouse-pos-list-archive a, .next-case-btn').on('mouseenter', function() {
     $('.mouse-pos-list-btn, .mouse-pos-list-span').addClass('active-big');
@@ -1090,6 +1021,8 @@ function initScrollLetters() {
 
 }
 
+
+
 /**
 * Scrolltrigger Nav
 */
@@ -1106,23 +1039,6 @@ function initTricksWords() {
 
   var wordWrap = spanWord.item(i);
   wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="span-line"><span class="span-line-inner">$2</span></span>');
-
-  }
-
-}
-function initTricksWordText() {
-    
-  // Copyright start
-  // Â© Code by T.RICKS, https://www.tricksdesign.com/
-  // You have the license to use this code in your projects but not redistribute it to others
-  // Tutorial: https://www.youtube.com/watch?v=xiAqTu4l3-g&ab_channel=TimothyRicks
-
-  // Find all text with .tricks class and break each letter into a span
-  var spanWord = document.getElementsByClassName("span-texts");
-  for (var i = 0; i < spanWord.length; i++) {
-
-  var wordWrap = spanWord.item(i);
-  wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="span-text"><span class="span-text-inner">$2</span></span>');
 
   }
 
@@ -1252,6 +1168,11 @@ function initScrolltriggerAnimations() {
     //   x: 100
     // }, "anim")
 
+    
+    tl.from(targetElementHamburger, {
+      boxShadow: "0px 0px 0px 0px rgb(0, 0, 0)",
+      ease: "none"
+    });
   });
   }
 
@@ -1282,41 +1203,25 @@ function initScrolltriggerAnimations() {
   });
   }
 
-
-  // if(document.querySelector(".page_transition"))
-  // {
-  //   $(".page_transition").each(function (index) {
-  //     let triggerElement = $(this);
-  //     let targetElement = $(".page_transition .page1");
-  //     let tl = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: triggerElement,
-  //         toggleActions:'play none none reset', 
-  //         start: "0 100%",
-  //         end: "100% 0",
-  //         scrub: 3
-  //       }
-  //     });    
-      
-  //     tl.to(".page1 h1", {
-  //       duration: .2,
-  //       x: -150,
-  //   }, "anim")
-  //   tl.to(".page1 h2", {
-  //       x: 150
-  //   }, "anim")
-  //     tl.to(".page1 video", {
-  //       y: -200,
-  //       width: "100%"
-  //     }, "anim")
-  //   })
-
-    
-  //   // tl3.to(".main",{
-  //   //     backgroundColor:"#fff"
-  //   // })
-  // }
- 
+  if(document.querySelector(".page_transition"))
+  {
+    $(".page_transition").each(function (index) {
+      let triggerElement = $(this);
+      let targetElement = $(".page_transition .page1");
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: triggerElement,
+          toggleActions:'play none none reset', 
+          start: "0 100%",
+          end: "100% 0",
+          scrub: 3
+        }
+      });    
+      tl.to(".page1 img", {
+        width: "95%"
+      }, "anim")
+    })
+  }
 
   if(document.querySelector(".fade-in.animate")) {
   // Scrolltrigger Animation : Fade in
@@ -1332,7 +1237,6 @@ function initScrolltriggerAnimations() {
         end: "100% 0%",
       }
     });
-    
     if(targetElement) {
       tl.from(targetElement, {
         y: "2em",
@@ -1396,69 +1300,6 @@ function initScrolltriggerAnimations() {
         }, 0);
       });
       }
-
-      if(document.querySelector(".page_transition"))
-      {
-        $(".page_transition").each(function (index) {
-          var n = gsap.timeline();
-          let triggerElement = $(this);
-          let targetElement = $(".page_transition .page1");
-          let tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: triggerElement,
-              toggleActions:'play none none reset', 
-              start: "0 100%",
-              end: "100% 0",
-              scrub: 3
-            }
-          }); 
-          ScrollTrigger.create({
-            trigger: ".page1 .content",
-            start: "top top",
-            pinnedContainer: ".page1",
-            pinType: "transform",
-            onRefreshInit: (e) => e.scroll(0),
-            pin: !0,
-            end: () => document.querySelector(".page_transition video").clientHeight,
-          }),
-        n.to(".page_transition video", {
-          scaleX: 1,
-          scaleY: 1,
-          scrollTrigger: {
-            trigger: ".page1",
-            start: "top top",
-            ease: "expo.inOut",
-            scrub: !0,
-            end: "70% 50%",
-          },
-        }),
-          gsap.to(".page1 .content", {
-            opacity: 1,
-            filter: "blur(5px)",
-            scrollTrigger: {
-              trigger: ".page1",
-              start: "top top",
-              ease: "expo.inOut",
-              scrub: !0,
-              end: () => document.querySelector(".page_transition video").clientHeight,
-            },
-          });
-        tl.to(".page1 h1", {
-            duration: .2,
-            x: -150,
-        }, "anim")
-        tl.to(".page1 h2", {
-            x: 150
-        }, "anim")
-          tl.to(".page_transition video", {
-            y: -100,
-          }, "anim")
-    
-          
-        })
-    
-        
-      }
       
       if(document.querySelector(".footer-footer-wrap")) {
       // Scrolltrigger Animation : Footer General Footer
@@ -1485,33 +1326,6 @@ function initScrolltriggerAnimations() {
         }, 0);
       });
       }
-
-      if(document.querySelector(".about-round-wrap")) {
-      // Scrolltrigger Animation : Footer General Footer
-      $(".about-round-wrap").each(function (index) {
-        let triggerElement = $(this);
-        let targetElementRound = $(".about-rounded-div .rounded-div-wrap");
-        let targetElementArrow = $("footer .arrow");
-      
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: triggerElement,
-            start: "0% 100%",
-            end: "100% 100%",
-            scrub: 0
-          }
-        });
-        tl.to(targetElementRound, {
-          height: 0,
-          ease: "none"
-        }, 0)
-        .from(targetElementArrow, {
-          rotate: 15,
-          ease: "none"
-        }, 0);
-      });
-      }
-
 
       if(document.querySelector(".footer-case-wrap")) {
         // Scrolltrigger Animation : Footer Case
@@ -1638,14 +1452,8 @@ var swiper = new Swiper(".swiper", {
     nextEl: ".swiper_button-next",
     prevEl: ".swiper_button-prev",
   },
-  speed: 1000, // Set the duration in milliseconds
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  mousewheel: {
-    enabled: false,
-  },
+  speed: 700, // Set the duration in milliseconds
+
 });
 }
 
